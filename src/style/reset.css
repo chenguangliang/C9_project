@@ -1,0 +1,52 @@
+@charset "utf-8";
+/*1px线问题（ios8）*/
+html.hairlines * {border-width: .5px !important;  }
+body, header, footer, section, div, span, p, img, a, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, em, i, b, u, del, menu, nav, fieldset, legend, article, aside, details, figcaption, hgroup, pre, code, from, blockquote, th, td, tr, hr, table, img, figure, button, input, textarea {  padding: 0;margin: 0;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;-o-user-select: none;user-select: none;-webkit-touch-callout: none;-webkit-text-size-adjust: none;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  font-family: Microsoft Yahei, Helvetica, Arial;  }
+input, textarea {-webkit-user-select: auto !important;  user-select: auto !important; /*-webkit-appearance:none;*/  }
+:focus { outline: none;}
+img {border: 0 none}
+ul {list-style: none;}
+a {text-decoration: none;}
+button, input {border: 0 none;}
+u, del {text-decoration: none;  }
+input[type="submit"], input[type="reset"], input[type="button"], input[type="password"], input[type="text"], button {outline: none;}
+html {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+*, *:before, *:after {-webkit-box-sizing: inherit;-moz-box-sizing: inherit;box-sizing: inherit;}
+.clear {*zoom: 1;}
+.clear:after {clear: both;}
+.clear:before, .clearfix:after {content: ' ';display: table;}
+select {appearance:none;-moz-appearance:none;-webkit-appearance:none; background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;  background-size: 12px 9px;padding-right: 14px;  }
+select::-ms-expand { display: none; }
+hr {border: none;height: 1px;  }
+svg:not(:root) {overflow: hidden;}
+/*--下面的操作是针对于HTML5和响应是布局准备的,不支持IE6~8以及其它低版本的浏览器--*/
+html {-webkit-touch-callout: none;-webkit-text-size-adjust: 100%;  }
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {display: block;}
+audio, canvas, progress, video {  display: inline-block;}
+progress {vertical-align: baseline;  }
+mark {  background-color: #ff0;  color: #000;  }
+sub, sup {  position: relative;  font-size: 75%;  line-height: 0;  vertical-align: baseline;  }
+sub {bottom: -0.25em;  }
+sup {top: -0.5em;  }
+button, input, select, textarea {font-size: 100%;  outline: none;  }
+button, select {text-transform: none;}
+button, html [type="button"], [type="reset"], [type="submit"] {  -webkit-appearance: button;  }
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;  }
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {  outline: 1px dotted ButtonText;  }
+[type="checkbox"], [type="radio"] {  box-sizing: border-box;padding: 0;  }
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {  height: auto;  }
+[type="search"] {-webkit-appearance: textfield;  outline-offset: -2px;  }
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {  -webkit-appearance: none;  }
+::-webkit-input-placeholder {  color: inherit;}
+::-webkit-file-upload-button {  -webkit-appearance: button;font: inherit;  }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance: none !important;  margin: 0;  }
+input[type="number"] {-moz-appearance: textfield;  }
+/*超出一行...*/
+.oneLine{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+/*超出一行...*/
+.oneLineNoPoint{white-space: nowrap;overflow: hidden;}
+/*超出两行...*/
+.twoLine{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+/*超出三行...*/
+.threeLine{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
+[v-cloak] {display: none;}

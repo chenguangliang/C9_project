@@ -1,0 +1,140 @@
+/*此文件为公共样式-若需改动请与前端协调*/
+.mar_t7 {margin-top: 7px;}
+.mar_t10{margin-top: 10px;}
+.mar_t15{margin-top: 15px;}
+.mar_t20{margin-top: 20px;}
+.mar_t24{margin-top: 24px;}
+.mar_t30{margin-top: 30px;}
+.mar_t50{margin-top: 50px;}
+.mar_b20{margin-bottom: 20px;}
+.mar_b30{margin-bottom: 30px;}
+.mar_l5 {margin-left: 5px;}
+.mar_l10 {margin-left: 10px;}
+.mar_l20 {margin-left: 20px;}
+.mar_l40 {margin-left: 40px;}
+.mar_10{margin:10px}
+.mar_20{margin: 20px}
+
+.pad_t10{padding-top: 10px;}
+.pad_b20{padding-bottom: 20px;}
+.pad_l2{padding-left:2px;}
+.pad_l3{padding-left:3px;}
+.pad_l25{padding-left: 25px;}
+.pad_l30{padding-left: 30px;}
+.pad_4{padding: 4px;}
+.pad_10{padding: 10px;}
+.pad_20{padding: 20px;}
+
+.hei_28 {height: 28px;}
+.hei_36 {height: 36px;}
+.hei_36_only {height: 36px;}
+.hei_140 {height: 140px;}
+
+.wid_150{width: 150px;}
+.wid_340{width: 340px;}
+.wid_600{width: 600px;}
+
+.col_333 {color: #333;}
+.col_666 {color: #666;}
+.col_999 {color: #999;}
+.col_e60012{color:#e60012}
+
+.font_16{font-size: 16px;}
+.font_22{font-size: 22px;}
+.font_28{font-size: 28px;}
+.font_30{font-size: 30px;}
+.font_35{font-size: 35px;}
+.font_40{font-size: 40px}
+.font_44{font-size: 44px}
+.font_50{font-size: 50px;}
+.font_60{font-size: 60px;}
+.font_bold,.fontBold{font-weight: bold;}
+.font_yaHei{font-family: Microsoft Yahei, Arial;}
+
+.text_cen{text-align: center;}
+.text_right{text-align: right;}
+
+.over_hide{overflow: hidden;}
+
+.cursor_po{cursor:pointer;}
+
+.input_Style2 {border-radius: 5px;}
+.input_Style_b {color: #474747;padding-left: 10px;border-bottom: 1px solid #e8e8e8;background: #fff;border-radius: 2px;font-family: Microsoft Yahei;}
+
+.textCenter,.text_center {text-align: center;}
+.textLeft,.text_left {text-align: left;}
+.textRight,.text_right {text-align: right;}
+
+/*杂*/
+.ver_mid{vertical-align:middle}
+.dis_inb{display: inline-block;}
+.dis_b{display: block}
+.cursor_p , .squareBtn {cursor: pointer;}
+.backTran {background-color: transparent;}
+.redBorder {border-color: #e60012;color: #e60012;}
+.textAreaStyle {resize: none;vertical-align: top;}
+.border_radius10{-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;}
+
+/*超出一行(加/不加)省略号*/
+.oneLine {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.oneLineNoPoint {white-space: nowrap;overflow: hidden;}
+.twoLine {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.threeLine {overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;}
+
+/*镂空按钮、红色按钮请用a标签写！*/
+.hollowBtnGray {display: inline-block;padding: 0 20px;font-size: 16px;line-height: 30px;text-align: center;background-color: transparent;border: 1px solid rgb(214, 214, 214);border-radius: 5px;color: #666;cursor: pointer;font-family: Microsoft Yahei, Arial;}
+.hollowBtnRed {display: inline-block;padding: 0 10px;font-size: 14px;line-height: 30px;text-align: center;background-color: transparent;border: 1px solid #e60012;border-radius: 5px;color: #e60012;cursor: pointer;font-family: Microsoft Yahei, Arial;}
+a.hollowBtnGray:hover {border-color: #e60012;color: #fff;}
+.redBtn,.yellowBtn {display: inline-block;text-align: center;background-color: #e60012;padding: 0 10px;line-height: 30px;color: white;font-size: 14px;border-radius: 5px;cursor: pointer;font-family: Microsoft Yahei, Arial;}
+a.redBtn:hover {background-color: #c60011;color: #fff;}
+a.yellowBtn {background-color:#f39700;}
+a.yellowBtn:hover {background-color: #f37f00;color: #fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
