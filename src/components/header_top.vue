@@ -25,8 +25,10 @@
           <el-menu-item index="3">印刷知识</el-menu-item>
           <el-menu-item index="4"><a href="javascript:;" target="_blank">C9重要伙伴</a></el-menu-item>
           <el-menu-item index="5" disabled>联系我们</el-menu-item>
-          <el-menu-item index="6" style="float: right;">登录</el-menu-item>
-          <el-menu-item index="7" style="float: right;">注册</el-menu-item>
+          <el-menu-item index="6" style="float: right;" @click="hello">hello</el-menu-item>
+          <el-menu-item index="7" style="float: right;" @click="logout">注销</el-menu-item>
+          <el-menu-item index="8" style="float: right;" @click="login">登录</el-menu-item>
+          <el-menu-item index="9" style="float: right;">注册</el-menu-item>
         </el-menu>
       </el-header>
     </div>
@@ -45,6 +47,36 @@
         methods: {
           handleSelect(key, keyPath) {
             console.log(key, keyPath);
+          },
+          login(){
+              let temp=this;
+              temp.axios("/auth-web/register/login",{params:{"username":"kxsd03","password":temp.md5("kxsd03")}}).then( (res) => {
+                  if(res.data.isSuccess){
+//                    temp.data=res.data.;
+                    }
+              }).catch( (err) => {
+                console.log(err);
+              })
+          },
+          hello(){
+              let temp=this;
+              temp.axios.get("/auth-web/demo/hello").then( (res) => {
+                  if(res.data.isSuccess){
+//                    temp.data=res.data.;
+                    }
+              }).catch( (err) => {
+                console.log(err);
+              })
+          },
+          logout(){
+              let temp=this;
+              temp.axios.get("/auth-web/register/logout").then( (res) => {
+                  if(res.data.isSuccess){
+//                    temp.data=res.data.;
+                    }
+              }).catch( (err) => {
+                console.log(err);
+              })
           }
         },
         components: {},

@@ -7,6 +7,8 @@ import store from './store/store'
 import $ from "jquery"
 import ElementUI from "element-ui"
 import 'element-ui/lib/theme-chalk/index.css';
+import './style/element-variables.scss'
+import md5 from 'js-md5'
 
 Vue.use(ElementUI);
 
@@ -16,10 +18,16 @@ Object.keys(filters).forEach(key=>{
 });
 
 import axios from 'axios'
-axios.defaults.baseURL = 'http://wx.printhome.com/mall-web';
+// axios.defaults.baseURL = 'http://wx.printhome.com/mall-web';
+axios.defaults.baseURL = 'http://192.168.1.121:8080';
+axios.defaults.withCredentials=true;
+axios.defaults.headers.post['X-Requested-With'] = 'XMLHttpRequest';
+// axios.defaults.headers['Content-Type']='application/x-www-form-urlencoded';
 Vue.prototype.axios=axios;  //只能使用这种方法全局挂载，因为axios没有install方法
 
 Vue.prototype.imgUrl_head="http://img.printhome.com/imgs/";  //只能使用这种方法全局挂载，因为axios没有install方法
+
+Vue.prototype.md5=md5;
 
 import "./style/reset.css" //引入公共css
 import "./style/common.css" //引入公共css

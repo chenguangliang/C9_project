@@ -15,8 +15,8 @@
           </div>
           <!--轮播图 end-->
           <!--卡片 start-->
-          <el-row class="mar_t20">
-            <el-col :span="7" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 1 : 0">
+          <el-row :gutter="20">
+            <el-col class="mar_t20" :span="8" v-for="(o, index) in 6" :key="o" >
               <el-card :body-style="{ padding: '0px' }" shadow="hover">
                 <img src="http://img.printhome.com/imgs/2015/11/26/f70e39d9-249c-4ed7-98c4-8339bad109bd.jpg" class="image">
                 <div style="padding: 14px;">
@@ -42,7 +42,89 @@
             @next-click="nextClick()"
           >
           </el-pagination>
-          <!--分页 start-->
+          <div class="block mar_t50">
+            <span class="demonstration">完整功能</span>
+            <el-pagination
+              @size-change="handleSizeChange"
+              @current-change="currentPage($event)"
+              :current-page="currentPage4"
+              :page-sizes="[100, 200, 300, 400]"
+              :page-size="100"
+              layout="total, sizes, prev, pager, next, jumper"
+              :total="400">
+            </el-pagination>
+          </div>
+          <!--分页 end-->
+          <!--动画 start-->
+          <template>
+            <div  class="mar_t30" style="text-align: left">
+              <el-button @click="show3 = !show3">Click Me</el-button>
+
+              <div style="margin-top: 20px; height: 200px;">
+                <el-collapse-transition>
+                  <div v-show="show3">
+                    <div class="transition-box">el-collapse-transition</div>
+                    <div class="transition-box">el-collapse-transition</div>
+                  </div>
+                </el-collapse-transition>
+              </div>
+            </div>
+          </template>
+          <!--动画 end-->
+          <!--input start-->
+          <div  class="mar_t30">
+            <el-input placeholder="请输入内容" v-model="input3">
+              <template slot="prepend">Http://</template>
+            </el-input>
+          </div>
+          <div style="margin-top: 15px;">
+            <el-input placeholder="请输入内容" v-model="input4">
+              <template slot="append">.com</template>
+            </el-input>
+          </div>
+          <div style="margin-top: 15px;">
+            <el-input placeholder="请输入内容" v-model="input5" class="input-with-select" size="mini">
+              <el-select v-model="select" slot="prepend" placeholder="请选择">
+                <el-option label="餐厅名" value="1"></el-option>
+                <el-option label="订单号" value="2"></el-option>
+                <el-option label="用户电话" value="3"></el-option>
+              </el-select>
+              <el-button slot="append" icon="el-icon-search"></el-button>
+            </el-input>
+          </div>
+          <!--input end-->
+          <p class="font_col mar_t50">sdfasdfa</p>
+          <!--开关-->
+          <el-switch
+            v-model="value2"
+            active-color="#13ce66"
+            inactive-color="#ff4949">
+          </el-switch>
+          <img src="http://192.168.1.121:8080/auth-web/register/acquire?uuid=0226"></img>
+          <!--滑动条-->
+          <template>
+            <div class="block">
+              <span class="demonstration">默认</span>
+              <el-slider v-model="value1"></el-slider>
+            </div>
+            <div class="block">
+              <span class="demonstration">自定义初始值</span>
+              <el-slider v-model="value2"></el-slider>
+            </div>
+            <div class="block">
+              <span class="demonstration">隐藏 Tooltip</span>
+              <el-slider v-model="value3" :show-tooltip="false"></el-slider>
+            </div>
+            <div class="block">
+              <span class="demonstration">格式化 Tooltip</span>
+              <el-slider v-model="value4" :format-tooltip="formatTooltip"></el-slider>
+            </div>
+            <div class="block">
+              <span class="demonstration">禁用</span>
+              <el-slider v-model="value5" disabled></el-slider>
+            </div>
+          </template>
+
         </el-main>
       </el-container>
     </el-container>
@@ -58,18 +140,26 @@ export default {
   data () {
     return {
       mallBanner: [],
-      currentDate: new Date()
+      currentDate: new Date(),
+      show3: true,
+      value1: true,
+      value2: true,
+      value1: 0,
+      value2: 50,
+      value3: 36,
+      value4: 48,
+      value5: 42
     }
   },
   components:{header_top,nav_left},
   beforeMount: function () {
     let temp=this;
     //首页轮播图
-    temp.axios.get("/mallBanner").then( (response) => {
-      response.data ? temp.mallBanner = response.data:'';
-    }).catch( (err) => {
-      console.log(err);
-    })
+//    temp.axios.get("/mallBanner").then( (response) => {
+//      response.data ? temp.mallBanner = response.data:'';
+//    }).catch( (err) => {
+//      console.log(err);
+//    })
   },
   methods:{
     prevClick(){
@@ -174,6 +264,26 @@ export default {
     .clearfix:after {
       clear: both
     }
+    .transition-box {
+      margin-bottom: 10px;
+      width: 200px;
+      height: 100px;
+      border-radius: 4px;
+      background-color: #409EFF;
+      text-align: center;
+      color: #fff;
+      padding: 40px 20px;
+      box-sizing: border-box;
+      margin-right: 20px;
+    }
+    /*input*/
+    .el-select .el-input {
+      width: 130px;
+    }
+    .input-with-select .el-input-group__prepend {
+      background-color: #fff;
+    }
+
   }
 
 </style>
